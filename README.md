@@ -1,6 +1,6 @@
 ### This project is done as part of the [Odin course](https://www.theodinproject.com/dashboard)
 
-### Calculator
+### Project: Calculator
 
 ### Build with
 
@@ -9,7 +9,7 @@
 - Flexbox Layout
 - JavaScript
 
-### [Live URL]()
+### [Live URL](https://saba-bar95.github.io/calculator/)
 
 ### Author
 
