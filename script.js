@@ -78,7 +78,7 @@ function setOperator(val) {
   if (headerPara.textContent === "Nice try ; )") return;
   if (secondNum === "0" && operator === "/") {
     headerPara.textContent = "Nice try ; )";
-    firstNum = secondNum = operator = false;
+    firstNum = operator = false;
     return;
   }
   if ((firstNum || firstNum === +"0") && operator && secondNum) {
@@ -97,6 +97,7 @@ function setDisplayValue() {
   displayValue = operate(firstNum, operator, secondNum);
   if (displayValue === "Nice try ; )") {
     headerPara.textContent = `${displayValue}`;
+    secondNum = false;
     return;
   }
   if (checkValueQty(displayValue)) {
@@ -113,16 +114,34 @@ function setClearedDisplay() {
   headerPara.textContent = "0";
 }
 
+function undoAction() {
+  if (headerPara.textContent === "0") {
+    setClearedDisplay();
+  }
+  if (headerPara.textContent === "Nice try ; )") return;
+  if (headerPara.textContent.length === 1) {
+    headerPara.textContent = "0";
+    firstNum = false;
+    return;
+  }
+  if (headerPara.textContent.endsWith(" "))
+    headerPara.textContent = headerPara.textContent.slice(0, -3);
+  else headerPara.textContent = headerPara.textContent.slice(0, -1);
+  secondNum = getSecondNum(headerPara.textContent);
+}
+
 numBtns.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     setNumber(e.target.textContent);
   });
+  numBtnsArr.push(btn.textContent);
 });
 
 operatorBtns.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     setOperator(e.target.textContent);
   });
+  operatorBtnsArr.push(btn.textContent);
 });
 
 clearBtn.addEventListener("click", setClearedDisplay);
@@ -136,16 +155,6 @@ equalBtn.addEventListener("click", function () {
 
 window.addEventListener("keydown", function (e) {
   e.preventDefault();
-  if (numBtnsArr.length <= 0) {
-    numBtns.forEach((btn) => {
-      numBtnsArr.push(btn.textContent);
-    });
-  }
-  if (operatorBtnsArr.length <= 0) {
-    operatorBtns.forEach((btn) => {
-      operatorBtnsArr.push(btn.textContent);
-    });
-  }
   if (numBtnsArr.includes(e.key)) {
     setNumber(e.key);
   }
@@ -155,4 +164,7 @@ window.addEventListener("keydown", function (e) {
     operator = false;
   }
   if (e.key === "c") setClearedDisplay();
+  if (e.key === "Backspace") undoAction();
 });
+
+undoBtn.addEventListener("click", undoAction);
