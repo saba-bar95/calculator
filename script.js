@@ -78,7 +78,7 @@ function setOperator(val) {
   if (headerPara.textContent === "Nice try ; )") return;
   if (secondNum === "0" && operator === "/") {
     headerPara.textContent = "Nice try ; )";
-    firstNum = operator = false;
+    firstNum = operator = secondNum = false;
     return;
   }
   if ((firstNum || firstNum === +"0") && operator && secondNum) {
