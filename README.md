@@ -2,7 +2,7 @@
 
 ### This project is done as part of the [Odin course](https://www.theodinproject.com/dashboard)
 
-## The creation process of this project represented me well how to build a JavaScript code that works well and helped me put my knowledge of JavaScript's fundamental principles into practice.
+#### The creation process of this project represented me well how to build a JavaScript code that works well and helped me put my knowledge of JavaScript's fundamental principles into practice.
 
 ### Build with
 
