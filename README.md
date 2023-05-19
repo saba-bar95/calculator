@@ -1,6 +1,6 @@
-### This project is done as part of the [Odin course](https://www.theodinproject.com/dashboard)
-
 ### Project: Calculator
+
+### This project is done as part of the [Odin course](https://www.theodinproject.com/dashboard)
 
 ### Build with
 

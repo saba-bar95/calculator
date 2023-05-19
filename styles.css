@@ -24,8 +24,8 @@ body {
   padding: 5px;
   background-color: #d1dd97;
   text-align: end;
-  font-size: 40px;
-  height: 80px;
+  font-size: 35px;
+  height: 100px;
   font-weight: 700;
 }
 
@@ -34,11 +34,12 @@ body {
 }
 
 .calc-body {
-  margin-top: 5px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
   align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .btn {
@@ -46,12 +47,24 @@ body {
   height: 80px;
   background-color: rgba(81, 174, 130, 0.87);
   border: 0;
-  border-radius: 10%;
+  border-radius: 40%;
   font-size: 30px;
   font-weight: 600;
   cursor: pointer;
+  flex: auto;
+}
+
+.btn:hover {
+  background-color: rgb(198, 201, 189);
+  transition: 0.6s;
 }
 
 .operator-btn {
   background-color: rgba(255, 179, 0, 0.87);
+}
+
+.clear-btn,
+.undo-btn {
+  flex: 160px;
+  border-radius: 50%;
 }
