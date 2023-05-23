@@ -2,8 +2,8 @@ const headerPara = document.querySelector(".header-para");
 const numBtns = document.querySelectorAll(".number-btn");
 const operatorBtns = document.querySelectorAll(".operator-btn");
 const equalBtn = document.querySelector(".equal-btn");
-const clearBtn = document.querySelector(".clear-btn");
-const undoBtn = document.querySelector(".undo-btn");
+const deleteBtn = document.querySelector(".delete-btn");
+const cancelBtn = document.querySelector(".cancel-btn");
 let firstNum, operator, secondNum, displayValue;
 let numBtnsArr = [];
 let operatorBtnsArr = [];
@@ -109,14 +109,14 @@ function setDisplayValue() {
   secondNum = false;
 }
 
-function setClearedDisplay() {
+function setdeleteedDisplay() {
   firstNum = operator = secondNum = false;
   headerPara.textContent = "0";
 }
 
-function undoAction() {
+function cancelAction() {
   if (headerPara.textContent === "0") {
-    setClearedDisplay();
+    setdeleteedDisplay();
   }
   if (headerPara.textContent === "Nice try ; )") return;
   if (headerPara.textContent.length === 1) {
@@ -144,7 +144,7 @@ operatorBtns.forEach((btn) => {
   operatorBtnsArr.push(btn.textContent);
 });
 
-clearBtn.addEventListener("click", setClearedDisplay);
+deleteBtn.addEventListener("click", setdeleteedDisplay);
 
 equalBtn.addEventListener("click", function () {
   if ((firstNum || firstNum === +"0") && operator && secondNum) {
@@ -159,12 +159,12 @@ window.addEventListener("keydown", function (e) {
     setNumber(e.key);
   }
   if (operatorBtnsArr.includes(e.key)) setOperator(e.key);
-  if (e.key === "Enter") {
+  if (e.key === "Enter" || e.key === "=") {
     setDisplayValue();
     operator = false;
   }
-  if (e.key === "c") setClearedDisplay();
-  if (e.key === "Backspace") undoAction();
+  if (e.key === "d") setdeleteedDisplay();
+  if (e.key === "Backspace") cancelAction();
 });
 
-undoBtn.addEventListener("click", undoAction);
+cancelBtn.addEventListener("click", cancelAction);

@@ -63,8 +63,8 @@ body {
   background-color: rgba(255, 179, 0, 0.87);
 }
 
-.clear-btn,
-.undo-btn {
+.delete-btn,
+.cancel-btn {
   flex: 160px;
   border-radius: 50%;
 }
