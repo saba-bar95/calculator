@@ -4,9 +4,7 @@
 
 #### The creation process of this project represented me well how to build a JavaScript code that works well and helped me put my knowledge of JavaScript's fundamental principles into practice.
 
-### This project is keyboard-friendly as well. You may type numbers and operators with appropriate keys and to cancel and delete actions by using "backspace" and "d" keys accordingly.
-
-You may type numbers and operators with appropriate keys and to delete and cancel actions using the "c" and "backspace" keys accordingly.
+#### This project is keyboard-friendly as well. You may type numbers and operators with appropriate keys and to cancel and delete actions by using "backspace" and "d" keys accordingly.
 
 ### Build with
 
