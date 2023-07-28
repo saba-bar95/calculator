@@ -2,15 +2,14 @@
 
 ### This project is done as part of the [Odin course](https://www.theodinproject.com/dashboard)
 
-#### The creation process of this project represented me well how to build a JavaScript code that works well and helped me put my knowledge of JavaScript's fundamental principles into practice.
+I had a great chance to use what I had learned about JavaScript's fundamentals in this project.
 
-#### This project is keyboard-friendly as well. You may type numbers and operators with appropriate keys and to cancel and delete actions by using "backspace" and "d" keys accordingly.
+A calculator that can be used on a keyboard and has all the necessary functionality. Using the relevant keys, you can input numbers and operators. You can also cancel and remove activities by using the corresponding "backspace" and "d" keys.
 
 ### Build with
 
 - HTML
 - CSS
-- Flexbox Layout
 - JavaScript Basics
 
 ### [Live URL](https://saba-bar95.github.io/calculator/)
