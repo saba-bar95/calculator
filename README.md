@@ -17,4 +17,3 @@ A calculator that can be used on a keyboard and has all the necessary functional
 ### Author
 
 - [GitHub](https://github.com/saba-bar95)
-- [Coderbyte](https://coderbyte.com/profile/gegewp)
